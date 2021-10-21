@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "sebbe@demo.se",
+            "username": "sebbe",
+            "password": "1234"
+        }
+    ],
+    "dogs": [
+        {
+            "name": "Arya",
+            "breed": "Husky",
+            "age": "1",
+            "notes": "En Stark och stark",
+            "owner": 1,
+            "id": 1
+        },
+        {
+            "name": "Billie",
+            "breed": "French Bulldog",
+            "age": "7",
+            "notes": "Clumsy and FURious",
+            "owner": 1,
+            "id": 2
+        }
+    ]
+}

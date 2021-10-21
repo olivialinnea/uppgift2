@@ -1,0 +1,25 @@
+/* Din CSS */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  width: 70vw;
+  color: white;
+}
+#header-image {
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  background-position: center;
+
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
