@@ -1,5 +1,6 @@
 <?php
 // Start på er HTML (doctype, body, navigation)
+require_once "includes/functions.php"
 ?>
 
 <!DOCTYPE html>
