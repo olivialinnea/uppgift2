@@ -15,7 +15,7 @@ require_once "includes/header.php";
     <?php } else { ?>
         <div class="home">
             <h1>Welcome back<?php echo $_SESSION["user"] ?></h1>
-            <p>You can <a href="/sign-in.php">Sign Out</a> or <a href="/list.php"> see the list of the dogs.</a></p>
+            <p>You can <a href="/sign-out.php">Sign Out</a> or <a href="/list.php"> see the list of the dogs.</a></p>
         </div>
     <?php } ?>
 </main>
