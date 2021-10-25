@@ -75,7 +75,6 @@ function deleteTheDog($dogID)
             break;
         }
     }
-
     if ($found) {
         $data = json_decode(file_get_contents("db.json"), true);
         unset($data["dogs"][$index]);
@@ -99,17 +98,16 @@ function showDog($dogInfo)
             $nameOfOwner = "<p>No Owner.</p>";
         }
     }
-    //om vi är inne på profile ska deleteknappen finnas
     if (checkURL("profile") == true) {
         $dogDiv = "
         <div class='oneDog'>
             <div class='name'>
                 <p>NAME</p>
-                <p><a href='show.php?id={$dogInfo[' id']}'>{$dogInfo['name']}</a></p>
+                <p><a href='show.php?id={$dogInfo['id']}'>{$dogInfo['name']}</a></p>
             </div>
             <div class='breed'>
                 <p>BREED</p>
-                <p><a href='list.php?breed={$dogInfo[' breed']}'>{$dogInfo['breed']}</a></p>
+                <p><a href='list.php?breed={$dogInfo['breed']}'>{$dogInfo['breed']}</a></p>
             </div>
             <div class='age'>
                 <p>AGE</p>
@@ -125,7 +123,7 @@ function showDog($dogInfo)
             </div>
             <div class='delete'>
                 <p>ACTION</p>
-                <p><a href='delete.php?id={$dogInfo[' id']}'>DELETE</a></p>
+                <p><a href='delete.php?id={$dogInfo['id']}'>DELETE</a></p>
             </div>
         </div>";
     } else {
@@ -133,11 +131,11 @@ function showDog($dogInfo)
         <div class='oneDog' style='grid-template-columns: repeat(5, 1fr);'>
             <div class='name'>
                 <p>NAME</p>
-                <p><a href='show.php?id={$dogInfo[' id']}'>{$dogInfo['name']}</a></p>
+                <p><a href='show.php?id={$dogInfo['id']}'>{$dogInfo['name']}</a></p>
             </div>
             <div class='breed'>
                 <p>BREED</p>
-                <p><a href='list.php?breed={$dogInfo[' breed']}'>{$dogInfo['breed']}</a></p>
+                <p><a href='list.php?breed={$dogInfo['breed']}'>{$dogInfo['breed']}</a></p>
             </div>
             <div class='age'>
                 <p>AGE</p>
@@ -157,9 +155,9 @@ function showDog($dogInfo)
 }
 
 
-function checkURL($string)
+function checkURL($stringInURL)
 {
-    if (strpos($_SERVER['REQUEST_URI'], "$string") !== false) {
+    if (strpos($_SERVER['REQUEST_URI'], "$stringInURL") !== false) {
         return true;
     } else {
         return false;

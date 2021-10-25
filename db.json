@@ -11,10 +11,16 @@
             "email": "olivia@demo.se",
             "username": "olivia",
             "password": "yolo"
+        },
+        {
+            "id": 3,
+            "email": "erik@demo.se",
+            "username": "erik",
+            "password": "fyratimmaromdagen"
         }
     ],
-    "dogs": [
-        {
+    "dogs": {
+        "0": {
             "name": "Arya",
             "breed": "Husky",
             "age": "1",
@@ -22,7 +28,7 @@
             "owner": 1,
             "id": 1
         },
-        {
+        "1": {
             "name": "Billie",
             "breed": "French Bulldog",
             "age": "7",
@@ -30,29 +36,21 @@
             "owner": 1,
             "id": 2
         },
-        {
-            "name": "Sally",
-            "breed": "Pug",
-            "age": "12",
-            "notes": "She likes CHICKEN",
-            "owner": 1,
-            "id": 3
-        },
-        {
-            "name": "Olivia",
-            "breed": "Pug",
-            "age": "10",
-            "notes": "She can't fecken run",
-            "owner": 1,
-            "id": 4
-        },
-        {
+        "4": {
             "name": "Alice",
             "breed": "Cocker spaniel ",
             "age": "13",
             "notes": "She hates singing people",
             "owner": 1,
             "id": 5
+        },
+        "5": {
+            "name": "Jonna",
+            "breed": "English Bulldog",
+            "age": "6",
+            "notes": "She loves Allan and tacos",
+            "owner": 2,
+            "id": 6
         }
-    ]
+    }
 }
