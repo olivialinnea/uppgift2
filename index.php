@@ -3,7 +3,7 @@
 // som behöver dom. Glöm inte heller session_start när det behövs!
 require_once "includes/header.php";
 ?>
-
+<!-- Kör en kontroll om vi är inloggade eller inte. Detta bestämmer vad som ska visas på home-sidan. -->
 <main>
     <?php if (!isset($_SESSION["loggedIn"])) { ?>
         <div class="home">

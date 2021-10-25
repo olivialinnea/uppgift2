@@ -4,6 +4,7 @@ error_reporting(-1);
 //Startar en ny session
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +17,28 @@ session_start();
 </head>
 
 <body>
-    <header>
-        <div id="header-image">
-            <p>The Internet Dog Database</p>
+    <main>
+        <header>
+            <div id="header-image">
+                <p>The Internet Dog Database</p>
+            </div>
+        </header>
+        <div id="wrapper">
+            <!-- Kontrollerar vilken nav som ska visas beroende på om man är inloggad eller inte. -->
+            <?php
+            if (!isset($_SESSION["loggedIn"])) { ?>
+                <nav>
+                    <h2><a href='/index.php'>Home</a></h2>
+                    <h2><a href='/list.php'>Dogs</a></h2>
+                    <h2><a href='/sign-in.php'>Sign In</a></h2>
+                </nav>
+            <?php } else { ?>
+                <nav>
+                    <h2><a href='/index.php'>Home</a></h2>
+                    <h2><a href='/list.php'>Dogs</a></h2>
+                    <h2><a href='/add.php'>Add</a></h2>
+                    <h2><a href='/profile.php'>Profile</a></h2>
+                    <h2><a href='/sign-out.php'>Sign Out</a></h2>
+                </nav>
+            <?php } ?>
         </div>
-    </header>
-
-    <nav>
-        <a href="/index.php">Home</a>
-        <a href="/list.php">Dogs</a>
-    </nav>

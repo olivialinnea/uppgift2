@@ -1,11 +1,12 @@
 <?php
+error_reporting(-1);
 session_start();
+
+require_once "includes/functions.php"
 ?>
 <?php
-$json = file_get_contents("db.json");
-$data = json_decode($json, true);
 
-$users = $data["users"];
+$users = getUsersFromDB();
 
 if (isset($_POST["email"], $_POST["password"])) {
     $email = $_POST["email"];
