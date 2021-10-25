@@ -29,6 +29,30 @@
             "notes": "Clumsy and FURious",
             "owner": 1,
             "id": 2
+        },
+        {
+            "name": "Sally",
+            "breed": "Pug",
+            "age": "12",
+            "notes": "She likes CHICKEN",
+            "owner": 1,
+            "id": 3
+        },
+        {
+            "name": "Olivia",
+            "breed": "Pug",
+            "age": "10",
+            "notes": "She can't fecken run",
+            "owner": 1,
+            "id": 4
+        },
+        {
+            "name": "Alice",
+            "breed": "Cocker spaniel ",
+            "age": "13",
+            "notes": "She hates singing people",
+            "owner": 1,
+            "id": 5
         }
     ]
 }
