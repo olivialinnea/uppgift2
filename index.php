@@ -1,8 +1,6 @@
 <?php
 // Startsidan. Glöm inte inkludera footer/header/functions-filerna på de sidor
 // som behöver dom. Glöm inte heller session_start när det behövs!
-error_reporting(-1);
-session_start();
 require_once "includes/header.php";
 ?>
 
@@ -14,7 +12,7 @@ require_once "includes/header.php";
         </div>
     <?php } else { ?>
         <div class="home">
-            <h1>Welcome back<?php echo $_SESSION["user"] ?></h1>
+            <h1>Welcome back <?php echo $_SESSION["user"] ?></h1>
             <p>You can <a href="/sign-out.php">Sign Out</a> or <a href="/list.php"> see the list of the dogs.</a></p>
         </div>
     <?php } ?>

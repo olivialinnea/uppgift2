@@ -1,8 +1,9 @@
 <?php
-// Start på er HTML (doctype, body, navigation)
-require_once "includes/functions.php"
+// Start på er HTML (doctype, body, navigation)//Kontrollerar fel
+error_reporting(-1);
+//Startar en ny session
+session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,6 @@ require_once "includes/functions.php"
     </header>
 
     <nav>
-        <a href="/">Home</a>
+        <a href="/index.php">Home</a>
         <a href="/list.php">Dogs</a>
     </nav>
