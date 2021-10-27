@@ -7,13 +7,12 @@ require_once "includes/header.php";
 <main>
     <?php if (!isset($_SESSION["loggedIn"])) { ?>
         <div class="home">
-            <h1> Welcome to IDDB! <br> The greatest dog database in the world!</h1>
-            <p>You can <a href="/sign-in.php">Sign In</a> or <a href="/list.php"> See the list of our dogs.</a></p>
+            <h1> Welcome to IDDB! <br> The greatest dog database <br> in the world!</h1>
         </div>
     <?php } else { ?>
         <div class="home">
-            <h1>Welcome back <?php echo $_SESSION["user"] ?></h1>
-            <p>You can <a href="/sign-out.php">Sign Out</a> or <a href="/list.php"> see the list of the dogs.</a></p>
+            <h1>Welcome back <?php echo $_SESSION["user"] ?>!</h1>
+            <div id="happyDog"><img src="/assets/images/log-in.png"></div>
         </div>
     <?php } ?>
 </main>

@@ -10,7 +10,6 @@ $allTheDogs = getDogsFromDB();
 
 <?php
 if (!isset($_GET["breed"])) { ?>
-    <h2 class="title">All of our adorable doggos!</h2>
     <div class="smallTitles">
         <h3>Name</h3>
         <h3>Breed</h3>

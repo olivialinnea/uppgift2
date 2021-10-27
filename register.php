@@ -1,5 +1,4 @@
 <?php
-
 error_reporting(-1);
 
 require_once "includes/functions.php";
@@ -39,3 +38,7 @@ if (isset($_POST["email"], $_POST["userName"], $_POST["password"])) {
         <?php } ?>
     <?php } ?>
 </div>
+
+<?php
+require_once "includes/footer.php";
+?>

@@ -48,14 +48,6 @@
             "owner": 1,
             "id": 2
         },
-        "4": {
-            "name": "Alice",
-            "breed": "Cocker spaniel ",
-            "age": "13",
-            "notes": "She hates singing people",
-            "owner": 1,
-            "id": 5
-        },
         "5": {
             "name": "Jonna",
             "breed": "English Bulldog",

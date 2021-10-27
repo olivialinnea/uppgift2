@@ -141,9 +141,6 @@ function showDog($dogInfo)
             <div class='notes'>
                 <p>{$dogInfo['notes']}</p>
             </div>
-            <div class='owner'>
-                <p>{$nameOfOwner}</p>
-            </div>
             <div class='delete'>
                 <p><a href='delete.php?id={$dogInfo['id']}'>DELETE</a></p>
             </div>

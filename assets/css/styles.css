@@ -1,31 +1,48 @@
 /* Din CSS */
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-header {
-  width: 70vw;
-  color: white;
-}
-#header-image {
-  background-image: url(../images/header.jpg);
+
+  background-image: url(../images/background.jpg);
   background-size: cover;
   background-position: center;
+  overflow: auto;
+  text-decoration: none;
 
+  height: 100vh;
+}
+header {
   height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4vw;
+  padding: 2vw;
+}
 
-  font-family: Arial, Helvetica, sans-serif;
+body > main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+}
+
+.home > h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-left: 2vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 > a {
+  color: white;
 }
 
 nav {
   display: flex;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav > h2 {
@@ -33,15 +50,28 @@ nav > h2 {
   text-align: center;
 }
 
+h2 > a:hover {
+  text-decoration: underline;
+}
+
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-family: "Montserrat";
 }
 
 .smallTitles {
+  grid-column: 1 / span 2;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
+  margin-left: 15vw;
+  margin-right: 15vw;
+
+  color: white;
+  font-family: "Montserrat";
+  font-size: 1.5vw;
 }
 
 .smallTitles > h3 {
@@ -52,23 +82,88 @@ nav > h2 {
 
 #list {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+
+  grid-column: 1 / span 2;
+  background-color: white;
 }
 
 .oneDog:nth-child(odd) {
-  background-color: pink;
+  background-color: lightblue;
 }
 
 .oneDog {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+  font-size: 1vw;
 }
 
 .oneDog > div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.oneDog > div:last-child > p > a {
+  color: red;
+}
+
+.oneDog > div > p > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.oneDog > div > p > a:hover {
+  text-decoration: underline;
+}
+
+#sign-in {
+  grid-column: 2;
+}
+
+#sign-in > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+#add {
+  grid-column: 2;
+}
+
+#profile {
+  grid-column: 1 / span 2;
+}
+
+img {
+  height: 12vw;
+}
+
+#happyDog {
+  display: flex;
+  padding-left: 8vw;
+  padding-top: 2vw;
+
+  flex-direction: flex-end;
+}
+
+#show {
+  grid-column: 1 / span 2;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+#show > h3 > a {
+  color: white;
+  font-family: "Montserrat";
+}
+
+#show > h3 > a:hover {
+  text-decoration: underline;
 }
 
 form {
@@ -101,14 +196,14 @@ button {
   padding: 8px 10px;
   border-radius: 2px;
   color: #ffffff;
-  background-color: olive;
+  background-color: skyblue;
   border: 0;
   cursor: pointer;
   transition: background-color 200ms ease;
 }
 
 button:hover {
-  background-color: #999905;
+  background-color: lightblue;
 }
 
 form h2 {
@@ -119,11 +214,19 @@ form h2 {
   border-bottom: 1px solid #aaa;
 }
 
+footer {
+  grid-column: 1 / span 2;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 footer p {
   margin: 0;
-  text-align: center;
   font-family: Georgia;
   font-style: italic;
   font-size: 14px;
-  color: #6a6a6a;
+  color: black;
+  margin-right: 2vw;
 }

@@ -10,6 +10,12 @@ require_once "includes/header.php";
 
 <div id="profile">
     <h2 class="title">Your doggos</h2>
+    <div class="smallTitles">
+        <h3>Name</h3>
+        <h3>Breed</h3>
+        <h3>Age</h3>
+        <h3>Notes</h3>
+    </div>
     <div id="list">
 
         <?php

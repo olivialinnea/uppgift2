@@ -26,7 +26,7 @@ if (isset($_POST["dogName"], $_POST["breed"], $_POST["age"], $_POST["notes"])) {
 ?>
 
 <div id="add">
-    <h2 class="title">Add your doggo here!</h2>
+    <h2 class="title">Add your furry friend here</h2>
     <form action="/add.php" method="POST">
         <input type="text" name="dogName" placeholder="Name">
         <input type="text" name="breed" placeholder="Breed">

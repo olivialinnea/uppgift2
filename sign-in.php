@@ -26,6 +26,7 @@ if (isset($_GET["error"])) {
 
 <!-- Inloggningsformulär -->
 <div id="sign-in">
+    <h2>Sign In</h2>
     <form method="POST" action="/check-login.php">
         <input type="text" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
@@ -34,9 +35,5 @@ if (isset($_GET["error"])) {
 </div>
 
 <?php
-
-echo '<pre>';
-echo var_dump($_POST);
-echo '</pre>';
 
 require_once "includes/footer.php"; ?>
