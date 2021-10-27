@@ -17,6 +17,18 @@
             "email": "erik@demo.se",
             "username": "erik",
             "password": "fyratimmaromdagen"
+        },
+        {
+            "email": "teddy@demo.se",
+            "username": "teddy",
+            "password": "bea",
+            "id": 6
+        },
+        {
+            "email": "allan@demo.se",
+            "username": "AllanBallan",
+            "password": "kaninis",
+            "id": 7
         }
     ],
     "dogs": {
@@ -51,6 +63,30 @@
             "notes": "She loves Allan and tacos",
             "owner": 2,
             "id": 6
+        },
+        "6": {
+            "name": "Frenchie",
+            "breed": "English Bulldog",
+            "age": "7",
+            "notes": "Likes French Toast",
+            "owner": 2,
+            "id": 7
+        },
+        "7": {
+            "name": "Hendrix",
+            "breed": "Spanish Water Dog",
+            "age": "5",
+            "notes": "He loves rock n' roll",
+            "owner": 3,
+            "id": 8
+        },
+        "8": {
+            "name": "Teddy",
+            "breed": "bichon frise",
+            "age": "1",
+            "notes": "He don't stop running",
+            "owner": 7,
+            "id": 9
         }
     }
 }

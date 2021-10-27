@@ -63,6 +63,34 @@ function addNewDog($postInfo)
     file_put_contents("db.json", $json);
 }
 
+function addNewUser($postInfo)
+{
+    //nycklar för den nya hunden, från $_POST
+    $newUser = [
+        "email" => $postInfo["email"],
+        "username" => $postInfo["userName"],
+        "password" => $postInfo["password"],
+    ];
+    //denna foreachen räknar ut den nya 
+    //hundens id utifrån vilka som redan finns
+    $highestUserID = 0;
+
+    $allUsers = getUsersFromDB();
+    foreach ($allUsers as $user) {
+        if ($user["id"] > $highestUserID) {
+            $highestUserID = $user["id"];
+        }
+    }
+    //owner till den nya hunden, vilket är den som är inloggad
+    //ID:et av den nya hunden
+    $newUser["id"] = $highestUserID + 1;
+    //lägg till hund i db.json
+    $data = json_decode(file_get_contents("db.json"), true);
+    array_push($data["users"], $newUser);
+    $json = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents("db.json", $json);
+}
+
 function deleteTheDog($dogID)
 {
     $allOurDogs = getDogsFromDB();
@@ -102,27 +130,21 @@ function showDog($dogInfo)
         $dogDiv = "
         <div class='oneDog'>
             <div class='name'>
-                <p>NAME</p>
                 <p><a href='show.php?id={$dogInfo['id']}'>{$dogInfo['name']}</a></p>
             </div>
             <div class='breed'>
-                <p>BREED</p>
                 <p><a href='list.php?breed={$dogInfo['breed']}'>{$dogInfo['breed']}</a></p>
             </div>
             <div class='age'>
-                <p>AGE</p>
                 <p>{$dogInfo['age']}</p>
             </div>
             <div class='notes'>
-                <p>NOTES</p>
                 <p>{$dogInfo['notes']}</p>
             </div>
             <div class='owner'>
-                <p>OWNER</p>
                 <p>{$nameOfOwner}</p>
             </div>
             <div class='delete'>
-                <p>ACTION</p>
                 <p><a href='delete.php?id={$dogInfo['id']}'>DELETE</a></p>
             </div>
         </div>";
@@ -130,23 +152,18 @@ function showDog($dogInfo)
         $dogDiv = "
         <div class='oneDog' style='grid-template-columns: repeat(5, 1fr);'>
             <div class='name'>
-                <p>NAME</p>
                 <p><a href='show.php?id={$dogInfo['id']}'>{$dogInfo['name']}</a></p>
             </div>
             <div class='breed'>
-                <p>BREED</p>
                 <p><a href='list.php?breed={$dogInfo['breed']}'>{$dogInfo['breed']}</a></p>
             </div>
             <div class='age'>
-                <p>AGE</p>
                 <p>{$dogInfo['age']}</p>
             </div>
             <div class='notes'>
-                <p>NOTES</p>
                 <p>{$dogInfo['notes']}</p>
             </div>
             <div class='owner'>
-                <p>OWNER</p>
                 <p>{$nameOfOwner}</p>
             </div>
         </div>";

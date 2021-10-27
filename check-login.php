@@ -21,7 +21,7 @@ if (isset($_POST["email"], $_POST["password"])) {
             //skapar nyckel för id
             $_SESSION["id"] = $user["id"];
             //väl sparat så skickas man vidare till listan av hundar.
-            header("Location: /list.php");
+            header("Location: /profile.php");
             exit();
         }
     }

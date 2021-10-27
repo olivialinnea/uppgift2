@@ -31,6 +31,7 @@ session_start();
                     <h2><a href='/index.php'>Home</a></h2>
                     <h2><a href='/list.php'>Dogs</a></h2>
                     <h2><a href='/sign-in.php'>Sign In</a></h2>
+                    <h2><a href='/register.php'>Register Here</a></h2>
                 </nav>
             <?php } else { ?>
                 <nav>
