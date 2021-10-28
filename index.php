@@ -12,7 +12,6 @@ require_once "includes/header.php";
     <?php } else { ?>
         <div class="home">
             <h1>Welcome back <?php echo $_SESSION["user"] ?>!</h1>
-            <div id="happyDog"><img src="/assets/images/log-in.png"></div>
         </div>
     <?php } ?>
 </main>

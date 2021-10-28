@@ -29,6 +29,12 @@
             "username": "AllanBallan",
             "password": "kaninis",
             "id": 7
+        },
+        {
+            "email": "evelina@demo.se",
+            "username": "Evelina",
+            "password": "ramses",
+            "id": 8
         }
     ],
     "dogs": {
@@ -79,6 +85,14 @@
             "notes": "He don't stop running",
             "owner": 7,
             "id": 9
+        },
+        "10": {
+            "name": "Ramses",
+            "breed": "Cat Dog",
+            "age": "3",
+            "notes": "A solar-powered halloween decoration",
+            "owner": 8,
+            "id": 11
         }
     }
 }
