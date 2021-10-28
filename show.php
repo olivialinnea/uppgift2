@@ -7,7 +7,7 @@ $allDogs = getDogsFromDB();
 ?>
 
 <div id="show">
-    <h3><a href="list.php">Go back to all the dogs</a></h3>
+    <h3><a href="list.php"> ◄ Go back to all the dogs</a></h3>
 
 
     <?php
@@ -26,7 +26,7 @@ $allDogs = getDogsFromDB();
             echo "<p class='error'>This dog does not exist.</p>";
         } else {
             //den första indexen av arrayen körs. det kan bara finnas 1 hund i arrayen.
-            echo showDog($oneDog[0]);
+            echo specificDog($oneDog[0]);
         }
     }
 

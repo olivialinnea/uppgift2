@@ -72,6 +72,8 @@ h2 > a:hover {
   color: white;
   font-family: "Montserrat";
   font-size: 1.5vw;
+
+  flex-grow: 1;
 }
 
 .smallTitles > h3 {
@@ -87,6 +89,7 @@ h2 > a:hover {
 
   grid-column: 1 / span 2;
   background-color: white;
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
 .oneDog:nth-child(odd) {
@@ -139,10 +142,58 @@ h2 > a:hover {
   grid-column: 1 / span 2;
 }
 
-img {
-  height: 12vw;
+#goBack {
+  color: white;
+  font-family: "Montserrat";
+  margin-left: 15vw;
+  display: flex;
+  text-decoration: none;
 }
 
+#goBack > a {
+  color: white;
+}
+
+#goBack > a:hover {
+  text-decoration: underline;
+}
+
+#allBreed {
+  color: white;
+  font-family: "Montserrat";
+  margin: 0vw 0vw 0vw 15vw;
+
+  flex-grow: 1;
+}
+#add {
+  font-family: "Montserrat";
+  color: white;
+  text-align: center;
+}
+#infoOneDog {
+  grid-column: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+}
+.infoAboutDog {
+  background-color: lightblue;
+  width: 50vw;
+  padding: 2vw;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+  box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.2);
+}
+
+.noDogs {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode";
+  margin-left: 1vw;
+}
+.noDogs > a {
+  color: skyblue;
+  text-decoration: underline;
+}
 #happyDog {
   display: flex;
   padding-left: 8vw;
@@ -164,6 +215,13 @@ img {
 
 #show > h3 > a:hover {
   text-decoration: underline;
+}
+
+.error {
+  color: tomato;
+  font-family: "Montserrat";
+  text-align: center;
+  grid-column: 2;
 }
 
 form {

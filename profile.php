@@ -7,7 +7,7 @@ require_once "includes/functions.php";
 require_once "includes/header.php";
 
 ?>
-
+<!-- Skapar profilen och dens divar -->
 <div id="profile">
     <h2 class="title">Your doggos</h2>
     <div class="smallTitles">
@@ -17,7 +17,7 @@ require_once "includes/header.php";
         <h3>Notes</h3>
     </div>
     <div id="list">
-
+        <!-- Går igenom alla hundarna och tar ut deras ägare - sen skapas hundivarna -->
         <?php
         $allDoggos = getDogsFromDB();
 
@@ -26,20 +26,19 @@ require_once "includes/header.php";
                 echo showDog($dog);
             }
         }
-
+        //skapar en array med hundar som matchar den inloggade användarens ID.
         $noDogs = [];
-
         foreach ($allDoggos as $dog) {
             if ($_SESSION["id"] == $dog["owner"]) {
                 array_push($noDogs, $dog);
             }
         }
-
+        //Om det inte finns några hundar i den nya arrayen så visas detta medelandet
         if (count($noDogs) == 0) {
-            echo "<h4>You have no dogs. Go ahead and <a href='add.php'>add</a> one.</h4>";
+            echo "<h4 class='noDogs'>You have no dogs. Go ahead and <a href='add.php'>add</a> one.</h4>";
         }
         ?>
     </div>
 </div>
-
+<!-- Inkluderar footern -->
 <?php require_once "includes/footer.php"; ?>

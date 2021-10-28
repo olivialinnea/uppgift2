@@ -18,8 +18,18 @@ if (!isset($_GET["breed"])) { ?>
         <h3>Owner</h3>
     </div>
 <?php } else { ?>
-    <h2>All <?php echo $_GET["breed"] ?>s </h2>
-    <h3><a href="list.php">Go back to all the dogs</a></h3>
+    <h3 id="goBack"><a href="list.php"> ◄ Go back to all the dogs</a></h3>
+    <div id="infoOneDog">
+        <h1 id="allBreed">All <?php echo $_GET["breed"] ?>s </h1>
+        <div class="smallTitles">
+            <h3>Name</h3>
+            <h3>Breed</h3>
+            <h3>Age</h3>
+            <h3>Notes</h3>
+            <h3>Owner</h3>
+        </div>
+    </div>
+
 <?php } ?>
 
 <div id="list">

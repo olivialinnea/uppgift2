@@ -5,7 +5,9 @@ session_start();
 require_once "includes/functions.php"
 ?>
 <?php
+//Ny php-fil skapad för att undvika header error som krockade med location i sign-in. Ingen vet varför detta händer hela tiden.
 
+//Hämtar användare
 $users = getUsersFromDB();
 
 if (isset($_POST["email"], $_POST["password"])) {
@@ -21,7 +23,7 @@ if (isset($_POST["email"], $_POST["password"])) {
             //skapar nyckel för id
             $_SESSION["id"] = $user["id"];
             //väl sparat så skickas man vidare till listan av hundar.
-            header("Location: /index.php");
+            header("Location: /list.php");
             exit();
         }
     }

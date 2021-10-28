@@ -10,31 +10,13 @@
             "id": 2,
             "email": "olivia@demo.se",
             "username": "olivia",
-            "password": "yolo"
+            "password": "tester"
         },
         {
             "id": 3,
             "email": "erik@demo.se",
             "username": "erik",
             "password": "fyratimmaromdagen"
-        },
-        {
-            "email": "teddy@demo.se",
-            "username": "teddy",
-            "password": "bea",
-            "id": 6
-        },
-        {
-            "email": "allan@demo.se",
-            "username": "AllanBallan",
-            "password": "kaninis",
-            "id": 7
-        },
-        {
-            "email": "evelina@demo.se",
-            "username": "Evelina",
-            "password": "ramses",
-            "id": 8
         }
     ],
     "dogs": {
@@ -54,14 +36,6 @@
             "owner": 1,
             "id": 2
         },
-        "5": {
-            "name": "Jonna",
-            "breed": "English Bulldog",
-            "age": "6",
-            "notes": "She loves Allan and tacos",
-            "owner": 2,
-            "id": 6
-        },
         "6": {
             "name": "Frenchie",
             "breed": "English Bulldog",
@@ -78,21 +52,21 @@
             "owner": 3,
             "id": 8
         },
-        "8": {
-            "name": "Teddy",
-            "breed": "bichon frise",
-            "age": "1",
-            "notes": "He don't stop running",
-            "owner": 7,
-            "id": 9
+        "11": {
+            "name": "Sally",
+            "breed": "Jack Russel",
+            "age": "2",
+            "notes": "She likes CHICKEN",
+            "owner": 2,
+            "id": 12
         },
-        "10": {
-            "name": "Ramses",
-            "breed": "Cat Dog",
-            "age": "3",
-            "notes": "A solar-powered halloween decoration",
-            "owner": 8,
-            "id": 11
+        "12": {
+            "name": "Loca",
+            "breed": "Pug",
+            "age": "4",
+            "notes": "She can't fecken run",
+            "owner": 2,
+            "id": 13
         }
     }
 }

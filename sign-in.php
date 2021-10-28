@@ -8,6 +8,16 @@ require_once "includes/header.php";
 //Hanterar JSON
 ?>
 
+<!-- Inloggningsformulär -->
+<div id="sign-in">
+    <h2>Sign In</h2>
+    <form method="POST" action="/check-login.php">
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Sign In</button>
+    </form>
+</div>
+
 <?php
 if (isset($_GET["error"])) {
     $error = $_GET["error"];
@@ -18,21 +28,11 @@ if (isset($_GET["error"])) {
         echo '<p class="error">Incorrect password.</p>';
     } elseif ($error == 3) { //fel email
         echo '<p class="error">The email does not exist.</p>';
-    } elseif ($error == 4) { //fel kombination av lösenord och
+    } elseif ($error == 4) { //fel kombination av lösenord och email
         echo '<p class="error">Incorrect username or password.</p>';
     }
 }
 ?>
-
-<!-- Inloggningsformulär -->
-<div id="sign-in">
-    <h2>Sign In</h2>
-    <form method="POST" action="/check-login.php">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Sign In</button>
-    </form>
-</div>
 
 <?php
 

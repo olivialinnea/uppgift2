@@ -1,10 +1,10 @@
 <?php
-// Start på er HTML (doctype, body, navigation)//Kontrollerar fel
+// Start på er HTML (doctype, body, navigation)
+//Kontrollerar fel
 error_reporting(-1);
 //Startar en ny session
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
