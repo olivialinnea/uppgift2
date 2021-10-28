@@ -8,10 +8,14 @@ require_once "includes/header.php";
     <?php if (!isset($_SESSION["loggedIn"])) { ?>
         <div class="home">
             <h1> Welcome to IDDB! <br> The greatest dog database <br> in the world!</h1>
+            <h3 class="start">You can <a href='/sign-in.php'>sign in</a> or <a href='/list.php'>see the list of dogs.</a></h3>
+            <!-- Tycker dessa är lite onödiga och dubbeltydliga eftersom vi har en nav med sign-in och dogs. Hade föredragit att lämna dem utanför men det stod som ett krav. -->
         </div>
     <?php } else { ?>
         <div class="home">
-            <h1>Welcome back <?php echo $_SESSION["user"] ?>!</h1>
+            <h1>Welcome <?php echo $_SESSION["user"] ?>!</h1>
+            <h3 class="start">You can <a href='/sign-out.php'>sign out</a> or <a href='/list.php'>see the list of dogs.</a></h3>
+            <!-- Tycker dessa är lite onödiga och dubbeltydliga eftersom vi har en nav med sign-in och dogs. Hade föredragit att lämna dem utanför men det stod som ett krav. -->
         </div>
     <?php } ?>
 </main>

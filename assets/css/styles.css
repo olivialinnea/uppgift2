@@ -31,6 +31,20 @@ body > main {
   margin-left: 2vw;
 }
 
+.start {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-left: 2vw;
+}
+
+.start > a {
+  color: #ffbf00;
+}
+
+.start > a:hover {
+  text-decoration: underline;
+}
 a {
   text-decoration: none;
 }
